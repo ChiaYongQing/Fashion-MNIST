@@ -74,7 +74,7 @@ print('Test accuracy:', score1[1])
               
 predicted_classes = cnn.predict(test_images)
 ```
-## Plot Confusion Matrix
+### Plot Confusion Matrix
 ```
 def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
     """
@@ -116,7 +116,7 @@ confusion_mtx = confusion_matrix(ytrue, ypred)
 # plot the confusion matrix
 plot_confusion_matrix(confusion_mtx, classes=class_names)
 ```
-## Defining model architecture
+### Defining model architecture
 ```
 img_inputs = keras.Input(shape=(28, 28, 1))
 
@@ -133,7 +133,6 @@ outputs = keras.layers.Dense(10, activation = 'softmax')(x3)
 model2 = keras.Model(inputs=img_inputs, outputs=outputs, name='mnist_model')
 model2.summary()
 ```
-## Plot model as png
 ```
 from IPython.display import SVG
 from keras.utils.vis_utils import model_to_dot
